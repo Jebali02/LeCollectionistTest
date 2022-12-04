@@ -14,9 +14,9 @@ public class HomePage extends BasePage {
 		ClickOnElement(listOFDestination);
 		SendKey(destination, SearchBox);
 		ClickSearch();
-		ClickOnElement(listOFDestination);
-		SendKey(destination, SearchBox);
-		ClickSearch();
+		//ClickOnElement(listOFDestination);
+		//SendKey(destination, SearchBox);
+		//ClickSearch();
 	}
 	
 	public void SearchAndSelectDestination (String destination) {

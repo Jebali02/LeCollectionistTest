@@ -64,6 +64,11 @@ public class OurLuxuryVillasAndChaletsPage extends BasePage {
 
 	public void ClickApplyBTN() {
 		ClickOnElement(ApplyBTN);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void ClickOnRecommened() {
