@@ -56,3 +56,11 @@ Means that the test will be run on chrome on qa environment.
 
 ###Report exemple After running test ###
 
+Inside this folder LeCollectionistTest/target/surefire-reports/emailable-report.html, you can find the report bellow
+
+![rap2](https://user-images.githubusercontent.com/116507752/205501638-9deb97a3-41cf-4a8f-b596-3a1a3ea0d952.PNG)
+
+Inside this folder LeCollectionistTest/target/surefire-reports/Suite/Research%20And%20Information%20Test.html, you can find the report bellow
+
+![reap1](https://user-images.githubusercontent.com/116507752/205501646-b90daa80-be65-46c3-83b1-4fc0ccb41d68.PNG)
+
