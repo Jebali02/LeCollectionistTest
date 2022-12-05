@@ -19,7 +19,7 @@ public class OurLuxuryVillasAndChaletsPage extends BasePage {
 	By FilterByIncreasingBed=By.xpath("//li[@class='multiselect__element']//span[contains(text(), 'Nombre de chambres croissant')]");
 	By VillaNumberResult =By.xpath("//div[@class='relative lc-col w-24/24 md:w-6/24']");
 	By Villa=By.xpath("//a[@href='/fr/location-luxe/appartement-mare-presqu-ile-saint-tropez']//div[@class='flex flex-col justify-between h-full']//div[@class='flex flex-col justify-between relative h-full px-4 pb-4 pt-4 text-center md:text-left']");
-
+	
 	public void SeachVilla (String VillaName) {
 		SendKey(VillaName, SearchHouseFiled);
 	}
