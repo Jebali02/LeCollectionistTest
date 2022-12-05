@@ -39,28 +39,31 @@ public class BasePage {
 		case "chrome":
 			ChromeOptions optionsChrome = new ChromeOptions();
 			WebDriverManager.chromedriver().setup();
+			optionsChrome.addArguments("--window-size=1920,1200");
 			driver = new ChromeDriver(optionsChrome);
 			logger.info("Launching Chrome !!!");
 			break;
 		case "firefox":
 			FirefoxOptions optionsfirefox = new FirefoxOptions();
 			WebDriverManager.firefoxdriver().setup();
+			optionsfirefox.addArguments("--window-size=1920,1200");
 			driver = new FirefoxDriver(optionsfirefox); 
 			logger.info("Launching firefox !!!");
 			break;
 		case "edge":
 			EdgeOptions edgeOptions = new EdgeOptions();
 			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver(edgeOptions); 
+			driver = new EdgeDriver(edgeOptions);
+			edgeOptions.addArguments("--window-size=1920,1200");
 			logger.info("Launching edge !!!");
 			break;
 
 		default:
 			ChromeOptions optionschrome = new ChromeOptions();
 			WebDriverManager.chromedriver().setup();
+			optionschrome.addArguments("--window-size=1920,1200");
 			driver = new ChromeDriver(optionschrome);
 			logger.info("Launching Chrome !!!");
-			driver = new ChromeDriver();
 			break;
 		}
 		driver.get(readPropertiesFile("URL"));

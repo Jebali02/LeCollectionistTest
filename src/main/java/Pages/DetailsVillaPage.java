@@ -6,7 +6,7 @@ import Base.BasePage;
 
 public class DetailsVillaPage extends BasePage{
 	
-	By InformationRequestBTN= By.xpath("//button[@data-testid='inquiry-date-picker__inquiry-btn']");
+	By InformationRequestBTN= By.xpath("//div[@class='relative lc_tooltip lc_tooltip--hover']//button[@data-testid='inquiry-date-picker__inquiry-btn']");
 	By LastNameField= By.id("inquiry-form__lastname_form-step");
 	By FirstNameField= By.xpath("//input[@data-testid='inquiry-form__input-firstname']");
 	By EmailField= By.id("inquiry-form__email_form-step");

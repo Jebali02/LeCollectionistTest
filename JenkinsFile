@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+     parameters {
+        choice(
+          name: 'Browsers',
+          choices: ['chrome', 'firefox', 'edge'],
+          description: 'Passing the browser name'
+        )
+         choice(
+          name: 'Environnements',
+          choices: ['dev', 'qa', 'preprod','prod'],
+          description: 'Passing the environnement name'
+        )
+      }
+    stages {
+        stage('Test') {
+            steps {
+                echo 'Testing step'
+                echo " The browser is ${params.Browsers}"
+                 echo " The browser is ${params.Environnements}"
+                 bat "mvn clean test -Denv=${Environnements} -Dbrowser=${Browsers}"
+                               
+                publishHTML target: [
+	                allowMissing: false,
+	                alwaysLinkToLastBuild: false,
+		            keepAll: true,
+		            reportDir: 'target/surefire-reports',
+		            reportFiles: 'emailable-report.html',
+		            reportName: 'Report'
+             	]
+             }       
+        }      
+        
+    }
+     post {
+        always {
+            junit '**/target/surefire-reports/junitreports/*.xml'
+        }
+    }
+}

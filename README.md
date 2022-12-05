@@ -56,11 +56,22 @@ Means that the test will be run on chrome on qa environment.
 
 ###Report exemple After running test ###
 
-Inside this folder LeCollectionistTest/target/surefire-reports/emailable-report.html, you can find the report bellow
+* Inside this folder LeCollectionistTest/target/surefire-reports/emailable-report.html, you can find the report bellow
 
 ![rap2](https://user-images.githubusercontent.com/116507752/205501638-9deb97a3-41cf-4a8f-b596-3a1a3ea0d952.PNG)
 
-Inside this folder LeCollectionistTest/target/surefire-reports/Suite/Research%20And%20Information%20Test.html, you can find the report bellow
+* Inside this folder LeCollectionistTest/target/surefire-reports/Suite/Research%20And%20Information%20Test.html, you can find the report bellow
 
 ![reap1](https://user-images.githubusercontent.com/116507752/205501646-b90daa80-be65-46c3-83b1-4fc0ccb41d68.PNG)
+
+###Jenkins integration ###
+
+* To run the project, you need to choose the paramters like the photo below
+
+![lecollectionniste2](https://user-images.githubusercontent.com/116507752/205698082-b991a7c6-6b06-41d6-b924-2b158a1b02af.PNG)
+
+* You will find the project report
+
+![lecollectionniste](https://user-images.githubusercontent.com/116507752/205698257-7a580e8f-3189-48e2-b9ea-efe1b367d76d.PNG)
+
 
