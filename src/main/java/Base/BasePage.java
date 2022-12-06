@@ -10,8 +10,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -28,8 +30,9 @@ public class BasePage {
 	public static String ENV=System.getProperty("env");
 	protected static final Logger logger = LogManager.getLogger(BasePage.class);	
 	
+
 	
-	@BeforeClass
+	@BeforeMethod
 	public void setUp() {
 		logger.info("Starting test - setup");
 		logger.info("Test runned on :" + browser);
@@ -129,7 +132,7 @@ public class BasePage {
 	}
 
 
-	@AfterClass
+	@AfterMethod
 	public void teadown()  {
 		System.out.println("teadown");
 		driver.quit();
