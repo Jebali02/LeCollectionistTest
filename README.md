@@ -58,11 +58,11 @@ Means that the test will be run on chrome on qa environment.
 
 * Inside this folder LeCollectionistTest/target/surefire-reports/emailable-report.html, you can find the report bellow
 
-![rap2](https://user-images.githubusercontent.com/116507752/205501638-9deb97a3-41cf-4a8f-b596-3a1a3ea0d952.PNG)
+![rep4](https://user-images.githubusercontent.com/116507752/206049067-fba0f10b-6508-4d80-8ba2-df77af4631a0.PNG)
 
 * Inside this folder LeCollectionistTest/target/surefire-reports/Suite/Research%20And%20Information%20Test.html, you can find the report bellow
 
-![reap1](https://user-images.githubusercontent.com/116507752/205501646-b90daa80-be65-46c3-83b1-4fc0ccb41d68.PNG)
+![rep3](https://user-images.githubusercontent.com/116507752/206049163-c3264906-c6a3-4f46-a885-46c0f6dd8cee.PNG)
 
 ###Jenkins integration ###
 
@@ -72,6 +72,6 @@ Means that the test will be run on chrome on qa environment.
 
 * You will find the project report
 
-![lecollectionniste](https://user-images.githubusercontent.com/116507752/205698257-7a580e8f-3189-48e2-b9ea-efe1b367d76d.PNG)
+![rep2](https://user-images.githubusercontent.com/116507752/206048397-4fc86747-f80d-430d-955a-0d94ad9dd961.PNG)
 
 
