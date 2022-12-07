@@ -3,6 +3,7 @@ package Pages;
 import org.openqa.selenium.By;
 
 import Base.BasePage;
+import io.qameta.allure.Step;
 
 public class DetailsVillaPage extends BasePage{
 	
@@ -13,33 +14,14 @@ public class DetailsVillaPage extends BasePage{
 	By phoneFiled= By.id("phone_undefined");
 	By SendRequestBTN=By.xpath("//button[@data-testid='inquiry-form-step__send-request-unlogged']");
 	
-	
-	public void ClickOnInformationRequestBTN() {
+	@Step("Fill out fileds : firstName,lastName,email,phone and send request for informations")
+	public void ClickOnInformationRequestBTN(String lastName ,String firstName ,String email,String phone) {
 		ClickOnElement(InformationRequestBTN);
-	}
-	public void FillLastName(String lastName) {
 		SendKey(lastName, LastNameField);
-	}
-	public void FillFirstName(String firstName) {
 		SendKey(firstName, FirstNameField);
-	}
-	public void FillEmail(String email) {
 		SendKey(email, EmailField);
-	}
-	public void FillPhoneNumber(String phone) {
 		SendKey(phone, phoneFiled);
-	}
-	public void ClickOnSendRequest() {
-		ClickOnElement(SendRequestBTN);
-	}
-	
-	public void SendRequest(String lastName, String firstName, String email, String phone)
-	{
-		FillFirstName(firstName);
-		FillLastName(lastName);
-		FillEmail(email);
-		FillPhoneNumber(phone);
-		//ClickOnSendRequest();
+		//ClickOnElement(SendRequestBTN);
 	}
 	
 }

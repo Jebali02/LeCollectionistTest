@@ -3,25 +3,18 @@ package Utilities;
 import java.lang.reflect.Method;
 
 import org.testng.annotations.DataProvider;
-import Tests.BaseTest;
+import Base.BasePage;
 
-public class DataUtil extends BaseTest{
+
+public class DataUtil extends BasePage{
 
 
 	@DataProvider(name="dp1")
 	public Object[][] getData(Method m) {
 
 		String sheetName = m.getName();
-		System.out.println("sheetName"+sheetName);
-		System.out.println("excel"+excel);
-
 		int cols = excel.getColumnCount(sheetName);
 		int rows = excel.getRowCount(sheetName);
-
-		System.out.println("rows"+rows);
-		System.out.println("cols"+cols);
-
-		
 		Object[][] data = new Object[rows-1][cols];
 		
 		for(int rowNum=2; rowNum<=rows; rowNum++) {

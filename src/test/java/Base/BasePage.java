@@ -13,8 +13,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-
+import Utilities.ExcelReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Step;
+
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import java.io.FileInputStream;
@@ -29,10 +31,14 @@ public class BasePage {
 	public static String browser=System.getProperty("browser");
 	public static String ENV=System.getProperty("env");
 	protected static final Logger logger = LogManager.getLogger(BasePage.class);	
-	
+	public ExcelReader excel = new ExcelReader(".//src//test//resources//Datas//Datas.xlsx");
 
+    public WebDriver getDriver() {
+        return driver;
+    }
 	
 	@BeforeMethod
+    @Step("Setup Driver")
 	public void setUp() {
 		logger.info("Starting test - setup");
 		logger.info("Test runned on :" + browser);
@@ -133,6 +139,7 @@ public class BasePage {
 
 
 	@AfterMethod
+	@Step("Close driver")
 	public void teadown()  {
 		System.out.println("teadown");
 		driver.quit();
