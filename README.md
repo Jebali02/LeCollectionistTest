@@ -54,7 +54,7 @@ Example :  mvn test -Dbrowser="chrome" -Denv="qa"
 Means that the test will be run on chrome on qa environment.
 
 
-###Report exemple After running test ###
+ #Report exemple After running test #
 
 * Inside this folder LeCollectionistTest/target/surefire-reports/emailable-report.html, you can find the report bellow
 
@@ -64,7 +64,15 @@ Means that the test will be run on chrome on qa environment.
 
 ![rep3](https://user-images.githubusercontent.com/116507752/206049163-c3264906-c6a3-4f46-a885-46c0f6dd8cee.PNG)
 
-###Jenkins integration ###
+ #Allure report #
+ * To find allure report documentation : 
+ https://docs.qameta.io/allure/
+ 
+ * Report exapmle : 
+ ![Capture1](https://user-images.githubusercontent.com/116507752/206323116-8a34e05e-5322-491b-95d9-41cc4575ec65.PNG)
+ 
+ 
+ #Jenkins integration #
 
 * To run the project, you need to choose the paramters like the photo below
 
