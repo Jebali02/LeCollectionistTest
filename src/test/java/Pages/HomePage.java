@@ -2,6 +2,7 @@ package Pages;
 
 import org.openqa.selenium.By;
 import Base.BasePage;
+import io.qameta.allure.Step;
 
 public class HomePage extends BasePage {
 	
@@ -10,20 +11,10 @@ public class HomePage extends BasePage {
 	By SearchHouseBTN=By.xpath("//a[@id='header-houses']");
 	By listOFDestination=By.xpath("//div[@data-id='search-input']//div[@class='multiselect__tags']");
 	
+	@Step("Search villa with destination")
 	public void SearchDestination (String destination) {
 		ClickOnElement(listOFDestination);
 		SendKey(destination, SearchBox);
-		ClickSearch();
-		//ClickOnElement(listOFDestination);
-		//SendKey(destination, SearchBox);
-		//ClickSearch();
-	}
-	
-	public void SearchAndSelectDestination (String destination) {
-		ClickOnElement(By.xpath("//div[@data-id='search-input']//div[@class='multiselect__tags']"));
-		SendKey(destination, SearchBox);
-	}
-	public void ClickSearch() {
 		ClickOnElement(SearchBTN);
 	}
 	public void SelectFirstResultFromList() {

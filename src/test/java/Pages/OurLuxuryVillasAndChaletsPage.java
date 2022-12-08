@@ -2,6 +2,8 @@ package Pages;
 
 import org.openqa.selenium.By;
 import Base.BasePage;
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Step;
 
 public class OurLuxuryVillasAndChaletsPage extends BasePage {
 
@@ -36,12 +38,12 @@ public class OurLuxuryVillasAndChaletsPage extends BasePage {
 		ClickOnElement(previousCallendarBTN);
 	}
 
+	@Step("Set arrival and departure date")
 	public void SetDates(String ArrivalMonth, String ArrivalDay, String DepartureDay)
 	{
 		ClickCheckInBTN();
 		ClickCheckInBTN();
 		ClickCheckInBTN();
-
 		boolean monthFinded=false;
 		while (!monthFinded) {
 			ClickOnNextMonthBTN();
@@ -53,16 +55,11 @@ public class OurLuxuryVillasAndChaletsPage extends BasePage {
 			}
 		}
 	}
-
-	public void ClickBudgetBTN () {
-		ClickOnElement(BudgetBTN);
-	}
-
+	
+	@Step("Enter max budget")
 	public void AddMaxBudget (String maxbudget) {
+		ClickOnElement(BudgetBTN);
 		SendKey(maxbudget, MaxBudget);
-	}
-
-	public void ClickApplyBTN() {
 		ClickOnElement(ApplyBTN);
 		try {
 			Thread.sleep(2000);
@@ -70,19 +67,18 @@ public class OurLuxuryVillasAndChaletsPage extends BasePage {
 			e.printStackTrace();
 		}
 	}
-
-	public void ClickOnRecommened() {
-		ClickOnElement(recommendedBTN);
-	}
-
+	@Step("Filter by increasing number of rooms")
 	public void ClickOnIncreasingBedFilter() {
+		ClickOnElement(recommendedBTN);
 		ClickOnElement(FilterByIncreasingBed);
 	}
-
+	
+	@Attachment
+	@Step("Get the result number of villa")
 	public String GetVillaNumberResult() {
 		return getText(VillaNumberResult);
 	}
-
+	@Step("Click on the first result of villa")
 	public void ClickOnVilla() {
 		ClickOnElement(Villa);
 	}
