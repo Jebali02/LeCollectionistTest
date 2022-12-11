@@ -31,10 +31,9 @@ public class ResearchAndInformationTest extends BasePage {
 	@Test(dataProviderClass = DataUtil.class, dataProvider = "dp1")
 	public void SearchVilla(String destination,String ArrivalMonth,String ArrivalDay,String DepartureDay,String MaxBudget, String Prenom, String Nom, String Phone, String email) {
 
-	
-		logger.info("I am inside test SearchVilla");
-		popupPage.ClickOnAcceptCookies();
-		homePage.SearchDestination(destination);
+		logger.info("Start : I am inside test SearchVilla");
+		
+		homePage.SearchAndSelectDestination(destination);
 		ourLuxuryVillasAndChaletsPage.SetDates(ArrivalMonth,ArrivalDay,DepartureDay);
 		ourLuxuryVillasAndChaletsPage.AddMaxBudget(MaxBudget);
 		ourLuxuryVillasAndChaletsPage.ClickOnIncreasingBedFilter();
@@ -42,6 +41,8 @@ public class ResearchAndInformationTest extends BasePage {
 		ourLuxuryVillasAndChaletsPage.ClickOnVilla();
 		detailsVillaPage.ClickOnInformationRequestBTN(Prenom,Nom,email,Phone);
 	
+		logger.info("End : I am inside test SearchVilla");
+
 	}
 
 }

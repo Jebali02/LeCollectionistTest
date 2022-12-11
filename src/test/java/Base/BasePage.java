@@ -2,6 +2,7 @@ package Base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -12,7 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
+import java.util.List;
 import Utilities.ExcelReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Step;
@@ -135,6 +136,17 @@ public class BasePage {
 		waitVisiblityOfElement(element);
 		logger.debug("The text getted form " + element + "is " + driver.findElement(element).getText());
 		return driver.findElement(element).getText();
+	}
+	public void SelectFromList(By element, String txt){
+		List<WebElement> elementList=driver.findElements(element);
+		int size=elementList.size();
+		for (int i=0;i<size ; i++) {
+			logger.info(elementList.get(i).getText());
+			if(elementList.get(i).getText().contains(txt)) {
+				elementList.get(i).click();
+			break;
+			}
+		}
 	}
 
 
